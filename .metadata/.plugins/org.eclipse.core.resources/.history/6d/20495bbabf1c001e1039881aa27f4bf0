@@ -1,0 +1,14 @@
+#language: pt
+Funcionalidade: Busca no Blog
+    como usuario
+    quero pesquisar um conteúdo no blog
+    para obter conhecimento sobre o assunto pesquisado
+	
+	Contexto: Acessar o site da SOC
+	  Dado que estou no site da soc
+		
+		@BuscaBlog
+    Cenário:Pesquisa no blog
+      Dado que acesso a pagina de busca
+      Quando pesquiso por 'curso'
+      Entao o sistema me retorna a busca por curso

@@ -1,0 +1,35 @@
+package actions;
+
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import elements.PesquisarBlogElement;
+import utils.GlobalDriver;
+
+public class PesquisarBlogAction {
+	
+	private final WebDriver webdriver = GlobalDriver.webdriver;
+	PesquisarBlogElement pesquisarBlogElement;
+	
+	public void acessarblog() throws Exception {
+		pesquisarBlogElement = new PesquisarBlogElement(webdriver);
+	    pesquisarBlogElement.acessarBlog.click();
+	}
+
+	public void preencherPesquisa(String _text) throws Exception {
+		pesquisarBlogElement = new PesquisarBlogElement(webdriver);
+	    pesquisarBlogElement.pesquisarBlog.sendKeys(_text);
+	    pesquisarBlogElement.pesquisarBlog.sendKeys(Keys.ENTER);
+	    Thread.sleep(5000);
+	}
+	
+	public void validarMensagem(String mensagem) throws Exception {
+		pesquisarBlogElement = new PesquisarBlogElement(webdriver);
+	    String mensagemobtida = pesquisarBlogElement.mensagemBlog.getText();
+	    Assert.assertTrue("Conteúdo da pesquisa não encontrado",
+	    		mensagemobtida.contains(mensagem));
+	}
+	
+	
+	
+}

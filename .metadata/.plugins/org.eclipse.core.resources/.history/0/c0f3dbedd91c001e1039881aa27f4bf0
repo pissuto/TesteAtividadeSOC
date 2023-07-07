@@ -1,0 +1,15 @@
+package elements;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import actions.PesquisarBlogAction;
+
+public class PesquisarBlogElement extends PesquisarBlogAction {
+	
+	public PesquisarBlogElement(WebDriver webdriver) throws Exception{
+        PageFactory.initElements(webdriver, this);
+    }
+	
+	
+}

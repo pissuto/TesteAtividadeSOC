@@ -1,0 +1,73 @@
+package steps;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
+
+public class PesquisaBlog {
+
+	private WebDriver driver;
+
+	String url;
+
+	@Before
+	public void inicializar() {
+		// url = "https://www.soc.com.br/";
+		// System.setProperty("webdriver.chrome.driver",
+		// "C:\\Users\\mpastorp\\ProjetoAtividadeSOC\\AtividadeSOC\\drivers\\chrome\\chromedriver.exe");
+		//driver = new ChromeDriver();
+	}
+
+	@After
+	public void finaliza() {
+		driver.quit();
+	}
+
+	//@Test
+	//public void teste() {
+	//	driver.get("https://www.soc.com.br/");
+	//	driver.manage().window().maximize();
+	//}
+
+	@Dado("que estou no site da soc")
+	public void que_estou_no_site_da_soc() {
+		WebDriver driver = new ChromeDriver();
+		url = "https://www.soc.com.br/";
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\mpastorp\\ProjetoAtividadeSOC\\AtividadeSOC\\drivers\\chrome\\chromedriver.exe");
+		driver.navigate().to(url);
+		// driver.navigate().to("https://www.soc.com.br/");
+	}
+
+	@Dado("que acesso a pagina de busca")
+	public void que_acesso_a_pagina_de_busca() {
+		WebElement pesquisarBlog = driver.findElement(By.xpath("//i[@class='fas fa-search']"));
+		pesquisarBlog.click();
+
+	}
+
+	@Quando("pesquiso por {string}")
+	public void pesquiso_por(String _text) throws InterruptedException {
+		WebElement pesquisarBlog = driver.findElement(By.xpath("//input[@placeholder='Procurar']"));
+		pesquisarBlog.sendKeys(_text);
+		pesquisarBlog.sendKeys(Keys.ENTER);
+		Thread.sleep(5000);
+	}
+
+	@Entao("o sistema me retorna a busca por curso")
+	public void o_sistema_me_retorna_a_busca_por_curso() {
+		String mensagem = driver.findElement(By.xpath("//body")).getText();
+		Assert.assertTrue("Conteúdo da pesquisa não encontrado",
+				mensagem.contains("Resultados da Pesquisa por: curso"));
+	}
+
+}

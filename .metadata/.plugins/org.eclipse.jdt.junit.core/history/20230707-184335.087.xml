@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="AtividadeSOC" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.TestRunner" time="27.44">
+    <testsuite name="Buscar Credenciado" time="27.44">
+      <testcase name="Pesquisa por empresa credenciada" classname="Buscar Credenciado" time="27.44">
+        <error>java.lang.ClassCastException: class jdk.proxy2.$Proxy24 cannot be cast to class org.openqa.selenium.By (jdk.proxy2.$Proxy24 is in module jdk.proxy2 of loader 'app'; org.openqa.selenium.By is in unnamed module of loader 'app')&#13;
+	at utils.Helpers.waitUntil(Helpers.java:57)&#13;
+	at actions.PesquisarCredenciadosAction.validarCredenciado(PesquisarCredenciadosAction.java:35)&#13;
+	at steps.PesquisaCredenciados.realizoABuscaPorUmCredenciadoEExiboSeuPerfil(PesquisaCredenciados.java:39)&#13;
+	at ✽.realizo a busca por um credenciado e exibo seu perfil(file:///C:/Users/mpastorp/ProjetoAtividadeSOC/AtividadeSOC/./src/main/java/features/PesquisaCredenciados.feature:14)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

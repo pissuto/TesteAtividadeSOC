@@ -1,0 +1,19 @@
+package actions;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import elements.PesquisarBlogElement;
+import utils.GlobalDriver;
+
+public class PesquisarBlogAction {
+	
+	private final WebDriver webdriver = GlobalDriver.webdriver;
+	PesquisarBlogElement pesquisarBlogElement;
+
+	public void preencherPesquisa(String _text) throws InterruptedException {
+	pesquisarBlogElement.pesquisarBlog.sendKeys(_text);
+	pesquisarBlogElement.pesquisarBlog.sendKeys(Keys.ENTER);
+	Thread.sleep(5000);
+	}
+	
+}

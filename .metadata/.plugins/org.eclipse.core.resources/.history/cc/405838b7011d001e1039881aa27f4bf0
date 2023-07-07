@@ -1,0 +1,30 @@
+package actions;
+
+import org.openqa.selenium.WebDriver;
+import elements.PesquisarCredenciadosElement;
+import utils.GlobalDriver;
+
+public class PesquisarCredenciadosAction {
+	
+	private final WebDriver webdriver = GlobalDriver.webdriver;
+	PesquisarCredenciadosElement pesquisarCredenciadosElement;
+	
+	public void acessarFerramentas() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+	    pesquisarCredenciadosElement.clicarFerramentas.click();
+	    pesquisarCredenciadosElement.clicarRedeSocnet.click();
+	}
+
+	public void buscarCredenciados() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+	    pesquisarCredenciadosElement.clicarBuscarCredenciados.click();
+	   
+	}
+	
+	public void validarCredenciado() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+		Thread.sleep(5000);
+	    pesquisarCredenciadosElement.clicarProximosMim.click();
+	    pesquisarCredenciadosElement.clicarSaibaMais.click();
+	}	
+}

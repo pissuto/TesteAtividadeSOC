@@ -1,0 +1,24 @@
+package steps;
+
+public class PesquisaCredenciados {
+	
+	
+	@Dado("que acesso a Rede SOCNET dentro do menu funcionalidade")
+	public void queAcessoARedeSOCNETDentroDoMenuFuncionalidade() {
+	    
+	}
+	@Quando("acesso a area de pesquisa dos credenciados")
+	public void acessoAAreaDePesquisaDosCredenciados() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Entao("realizo a busca por um credenciado e exibo seu perfil")
+	public void realizoABuscaPorUmCredenciadoEExiboSeuPerfil() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+
+}

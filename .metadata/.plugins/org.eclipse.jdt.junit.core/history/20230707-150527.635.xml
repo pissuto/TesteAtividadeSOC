@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="AtividadeSOC" tests="2" started="2" failures="1" errors="1" ignored="0">
+  <testsuite name="runner.TestRunner" time="57.461">
+    <testsuite name="Busca no Blog" time="31.713">
+      <testcase name="Pesquisa no blog" classname="Busca no Blog" time="31.713">
+        <failure>java.lang.AssertionError: Conteúdo da pesquisa não encontrado&#13;
+	at org.junit.Assert.fail(Assert.java:89)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:42)&#13;
+	at actions.PesquisarBlogAction.validarMensagem(PesquisarBlogAction.java:30)&#13;
+	at steps.PesquisaBlog.o_sistema_me_retorna_a_mensagem(PesquisaBlog.java:44)&#13;
+	at ✽.o sistema me retorna a mensagem 'Resultados da Pesquisa por: curso'(file:///C:/Users/mpastorp/ProjetoAtividadeSOC/AtividadeSOC/./src/main/java/features/PesquisaBlog.feature:14)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Buscar Credenciado" time="25.745">
+      <testcase name="Pesquisa por empresa credenciada" classname="Buscar Credenciado" time="25.745">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'que acesso a Rede SOCNET dentro do menu funcionalidade' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Dado("que acesso a Rede SOCNET dentro do menu funcionalidade")
+public void queAcessoARedeSOCNETDentroDoMenuFuncionalidade() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Quando("acesso a area de pesquisa dos credenciados")
+public void acessoAAreaDePesquisaDosCredenciados() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao("realizo a busca por um credenciado e exibo seu perfil")
+public void realizoABuscaPorUmCredenciadoEExiboSeuPerfil() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

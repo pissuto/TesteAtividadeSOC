@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="AtividadeSOC" tests="2" started="2" failures="0" errors="2" ignored="0">
+  <testsuite name="runner.TestRunner" time="0.147">
+    <testsuite name="Busca no Blog" time="0.115">
+      <testcase name="Pesquisa no blog" classname="Busca no Blog" time="0.115">
+        <error>java.nio.file.NoSuchFileException: .\target\screenshots\Date_7-6-2023_Time_11.34.5&#13;
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)&#13;
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)&#13;
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)&#13;
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.createDirectory(WindowsFileSystemProvider.java:521)&#13;
+	at java.base/java.nio.file.Files.createDirectory(Files.java:700)&#13;
+	at utils.Reports.takeScreenShotPasta(Reports.java:27)&#13;
+	at steps.Hooks.beforeEveryScenario(Hooks.java:24)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Buscar Credenciado" time="0.032">
+      <testcase name="Pesquisa por empresa credenciada" classname="Buscar Credenciado" time="0.032">
+        <error>java.nio.file.NoSuchFileException: .\target\screenshots\Date_7-6-2023_Time_11.34.5&#13;
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)&#13;
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)&#13;
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)&#13;
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.createDirectory(WindowsFileSystemProvider.java:521)&#13;
+	at java.base/java.nio.file.Files.createDirectory(Files.java:700)&#13;
+	at utils.Reports.takeScreenShotPasta(Reports.java:27)&#13;
+	at steps.Hooks.beforeEveryScenario(Hooks.java:24)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

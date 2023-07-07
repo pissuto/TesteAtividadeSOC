@@ -1,0 +1,39 @@
+package actions;
+
+import java.time.Duration;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import elements.PesquisarCredenciadosElement;
+import utils.GlobalDriver;
+import utils.Helpers;
+
+public class PesquisarCredenciadosAction {
+	
+	private final WebDriver webdriver = GlobalDriver.webdriver;
+	PesquisarCredenciadosElement pesquisarCredenciadosElement;
+	
+	public void acessarFerramentas() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+	    pesquisarCredenciadosElement.clicarFerramentas.click();
+	    pesquisarCredenciadosElement.clicarRedeSocnet.click();
+	}
+
+	public void buscarCredenciados() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+	    pesquisarCredenciadosElement.clicarBuscarCredenciados.click();
+	   
+	}
+	
+	public void validarCredenciado() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+		webdriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	    pesquisarCredenciadosElement.campoCEP.click();
+	    pesquisarCredenciadosElement.campoCEP.sendKeys("09121-420");
+	    pesquisarCredenciadosElement.campoCEP.sendKeys(Keys.ENTER);
+	    webdriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	    pesquisarCredenciadosElement.clicarVisualizar.click();
+	    webdriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	    pesquisarCredenciadosElement.clicarSaibaMais.click();
+	}	
+}

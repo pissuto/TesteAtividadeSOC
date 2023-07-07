@@ -1,0 +1,25 @@
+package elements;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import actions.PesquisarCredenciadosAction;
+
+public class PesquisarCredenciadosElement extends PesquisarCredenciadosAction {
+	
+	public PesquisarCredenciadosElement(WebDriver webdriver) throws Exception{
+        PageFactory.initElements(webdriver, this);
+    }	
+	
+	@FindBy(xpath = "//ul[@id='menu-1-4350684']//li[@class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5775']")
+	public WebElement clicarFerramentas;
+	
+	@FindBy(xpath = "//li[@class='menu-item menu-item-type-post_type menu-item-object-page menu-item-294']")
+	public WebElement clicarRedeSocnet;
+	
+	@FindBy(xpath = "//a[@class='elementor-button-link elementor-button elementor-size-sm elementor-animation-grow']")
+	public WebElement clicarBuscarCredenciados;
+	
+}

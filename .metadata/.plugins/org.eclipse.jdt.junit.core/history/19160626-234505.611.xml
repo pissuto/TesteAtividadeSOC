@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Cucumber" tests="2" started="2" failures="1" errors="0" ignored="0">
+  <testsuite name="Cucumber" time="58.349">
+    <testcase name="Pesquisa no blog" classname="Busca no Blog" time="30.738"/>
+    <testcase name="Pesquisa por empresa credenciada" classname="Buscar Credenciado" time="27.469">
+      <failure>
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class="btn center " data-valor="1"&gt;...&lt;/div&gt; is not clickable at point (1478, 102). Other element would receive the click: &lt;div id="div-carregando-operacao"&gt;...&lt;/div&gt;
+  (Session info: chrome=114.0.5735.199)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a315e6ae7d06db0c698e3f8e11ef80c7, clickElement {id=559FE517FB705B287A4232ED057B98E6_element_82}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\mpastorp\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49888}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49888/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (a315e6ae7d06db0c698e3f8e11ef80c7)] -&gt; xpath: //section[@id='tgl-tipo-visualizacao']//div[@class='btn center ']]
+Session ID: a315e6ae7d06db0c698e3f8e11ef80c7
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at actions.PesquisarCredenciadosAction.validarCredenciado(PesquisarCredenciadosAction.java:34)
+	at steps.PesquisaCredenciados.realizoABuscaPorUmCredenciadoEExiboSeuPerfil(PesquisaCredenciados.java:39)
+	at ✽.realizo a busca por um credenciado e exibo seu perfil(file:///C:/Users/mpastorp/ProjetoAtividadeSOC/AtividadeSOC/./src/main/java/features/PesquisaCredenciados.feature:14)
+
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>

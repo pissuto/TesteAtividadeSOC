@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="AtividadeSOC" tests="2" started="2" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.TestRunner" time="55.232">
+    <testsuite name="Busca no Blog" time="30.98">
+      <testcase name="Pesquisa no blog" classname="Busca no Blog" time="30.98"/>
+    </testsuite>
+    <testsuite name="Buscar Credenciado" time="24.252">
+      <testcase name="Pesquisa por empresa credenciada" classname="Buscar Credenciado" time="24.251">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'que acesso a Rede SOCNET dentro do menu funcionalidade' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Dado("que acesso a Rede SOCNET dentro do menu funcionalidade")
+public void queAcessoARedeSOCNETDentroDoMenuFuncionalidade() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Quando("acesso a area de pesquisa dos credenciados")
+public void acessoAAreaDePesquisaDosCredenciados() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao("realizo a busca por um credenciado e exibo seu perfil")
+public void realizoABuscaPorUmCredenciadoEExiboSeuPerfil() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

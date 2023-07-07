@@ -1,0 +1,36 @@
+package actions;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import elements.PesquisarCredenciadosElement;
+import utils.GlobalDriver;
+
+public class PesquisarCredenciadosAction {
+	
+	private final WebDriver webdriver = GlobalDriver.webdriver;
+	PesquisarCredenciadosElement pesquisarCredenciadosElement;
+	
+	public void acessarFerramentas() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+	    pesquisarCredenciadosElement.clicarFerramentas.click();
+	    pesquisarCredenciadosElement.clicarRedeSocnet.click();
+	}
+
+	public void buscarCredenciados() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+	    pesquisarCredenciadosElement.clicarBuscarCredenciados.click();
+	   
+	}
+	
+	public void validarCredenciado() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+		
+	    pesquisarCredenciadosElement.campoCEP.click();
+	    pesquisarCredenciadosElement.campoCEP.sendKeys("09121-420");
+	    pesquisarCredenciadosElement.campoCEP.sendKeys(Keys.ENTER);
+	    Thread.sleep(10000);
+	    pesquisarCredenciadosElement.clicarVisualizar.click();
+	    Thread.sleep(5000);
+	    pesquisarCredenciadosElement.clicarSaibaMais.click();
+	}	
+}

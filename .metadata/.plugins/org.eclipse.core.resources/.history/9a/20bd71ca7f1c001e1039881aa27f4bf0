@@ -1,0 +1,22 @@
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PesquisaBlog {
+	
+	private WebDriver driver;
+	
+	public void inicializar() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mpastorp\\ProjetoAtividadeSOC\\AtividadeSOC\\drivers\\chrome\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+	}
+	
+	@Test
+	public void teste() {
+
+		driver.get("https://www.soc.com.br/");
+		driver.manage().window().maximize();
+		driver.quit();
+	}
+
+}

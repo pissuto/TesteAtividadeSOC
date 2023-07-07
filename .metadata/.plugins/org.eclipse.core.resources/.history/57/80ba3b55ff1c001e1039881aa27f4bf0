@@ -1,0 +1,36 @@
+package actions;
+
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import elements.PesquisarBlogElement;
+import elements.PesquisarCredenciadosElement;
+import utils.GlobalDriver;
+
+public class PesquisarCredenciadosAction {
+	
+	private final WebDriver webdriver = GlobalDriver.webdriver;
+	PesquisarCredenciadosElement pesquisarCredenciadosElement;
+	
+	public void acessarFerramentas() throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+	    pesquisarCredenciadosElement.clicarFerramentas.click();
+	    pesquisarCredenciadosElement.clicarRedeSocnet.click();
+	}
+
+	public void buscarCredenciados(String _text) throws Exception {
+		pesquisarCredenciadosElement = new PesquisarCredenciadosElement(webdriver);
+	    pesquisarCredenciadosElement.clicarBuscarCredenciados.click();
+	   
+	}
+	
+	public void validarMensagem(String mensagem) throws Exception {
+		pesquisarBlogElement = new PesquisarBlogElement(webdriver);
+	    String mensagemobtida = pesquisarBlogElement.mensagemBlog.getText();
+	    Assert.assertTrue("Conteúdo da pesquisa não encontrado",
+	    		mensagemobtida.contains(mensagem));
+	}
+	
+	
+	
+}

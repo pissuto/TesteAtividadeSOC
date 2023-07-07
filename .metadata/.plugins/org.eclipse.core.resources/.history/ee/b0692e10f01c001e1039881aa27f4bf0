@@ -1,0 +1,27 @@
+package actions;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import elements.PesquisarBlogElement;
+import utils.GlobalDriver;
+
+public class PesquisarBlogAction {
+	
+	private final WebDriver webdriver = GlobalDriver.webdriver;
+	PesquisarBlogElement pesquisarBlogElement;
+	
+	public void acessarblog() throws Exception {
+		pesquisarBlogElement = new PesquisarBlogElement(webdriver);
+	    pesquisarBlogElement.acessarBlog.click();
+	}
+
+	public void preencherPesquisa(String _text) throws Exception {
+		pesquisarBlogElement = new PesquisarBlogElement(webdriver);
+	    pesquisarBlogElement.pesquisarBlog.sendKeys(_text);
+	    pesquisarBlogElement.pesquisarBlog.sendKeys(Keys.ENTER);
+	    Thread.sleep(5000);
+	}
+	
+	
+	
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="AtividadeSOC" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.TestRunner" time="56.843">
+    <testsuite name="Buscar Credenciado" time="56.843">
+      <testcase name="Pesquisa por empresa credenciada" classname="Buscar Credenciado" time="56.843"/>
+    </testsuite>
+  </testsuite>
+</testrun>
